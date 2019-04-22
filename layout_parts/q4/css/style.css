@@ -1,16 +1,17 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
-.q4_top_contents {
-  text-align: center;
-  padding: 20px;
-}
 
-.top_contents {
+/* 共通スタイル */
+.q4_contents {
   display: table;
   width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* top_bar */
 .contents_pink {
   display: table-cell;
   width: 100px;
@@ -31,17 +32,9 @@
   padding: 20px;
 }
 
-/*以下はbottom contents*/
-
-.q4_bottom_contents {
-  text-align: center;
-  padding: 20px;
+/* bottom_bar */
+.q4_contents:last-child {
   padding-top: 0;
-}
-
-.bottom_contents {
-  display: table;
-  width: 100%;
 }
 
 .contents_yellow {

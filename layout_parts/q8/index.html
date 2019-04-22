@@ -30,28 +30,28 @@
           <!-- 回答はここに書いてね -->
           <!-- すでについてるクラスにはstyleを指定しない。styleをつける場合は自分で新たにクラスをつけること -->
           <!-- 新たにタグは追加しなくてもできます。 -->
-          <div class="q8 q8--btn">
-            <p class="q8__title">ー small ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+          <div class="q8 q8--btn q8_btn">
+            <p class="q8__title btn_title_small">ー small ー</p>
+            <div class="small_btn small_common">common</div>
+            <div class="small_btn small_error">error</div>
+            <div class="small_btn small_disabled">disabled</div>
+            <div class="small_btn small_shadow">shadow</div>
           </div>
 
-          <div class="q8 q8--btn">
-            <p class="q8__title">ー middle ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+          <div class="q8 q8--btn q8_btn">
+            <p class="q8__title btn_title_middle">ー middle ー</p>
+            <div class="middle_btn middle_common">common</div>
+            <div class="middle_btn middle_error">error</div>
+            <div class="middle_btn middle_disabled">disabled</div>
+            <div class="middle_btn middle_shadow">shadow</div>
           </div>
 
-          <div class="q8 q8--btn">
-            <p class="q8__title">ー large ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+          <div class="q8 q8--btn q8_btn">
+            <p class="q8__title btn_title_large">ー large ー</p>
+            <div class="large_btn large_common">common</div>
+            <div class="large_btn large_error">error</div>
+            <div class="large_btn large_disabled">disabled</div>
+            <div class="large_btn large_shadow">shadow</div>
           </div>
           <!-- 回答はここに書いてね -->
         </div>
@@ -66,10 +66,13 @@
                まずは元々タグにあてられているスタイルを解除して、フラットな状態にしてからスタイルを当てていくことが大事です。
 
                特にradioとcheckboxのチェックのスタイルが難しいと思います。
-               やり方として、既存のチェックは使わずに擬似要素でチェックのフィールドを再現します。:checkedを使えばチェックされているかどうかでスタイルを変えることができるので、これをうまく使いましょう。cssでは+（隣接セレクタ）というものも使わなくてはなりませんので、調べてみましょう。
+               やり方として、既存のチェックは使わずに擬似要素でチェックのフィールドを再現します。:checkedを使えばチェックされているかどうかでスタイルを変えることができるので、
+               これをうまく使いましょう。cssでは+（隣接セレクタ）というものも使わなくてはなりませんので、調べてみましょう。
                また、一番下のボタンはbuttonタグを使って実装しましょう。（<input type="submit">を使って実装することも可能です）
 
-               この課題では、実際にユーザーが入力した値を送れる状態まで作っていただきます。answerの方で確認していただきたいのですが、全ての入力フォームを適当に記述してsubmitボタンを押してみてください。URL欄の最後に「?name=...」という感じの文字列が追加されているのがわかると思います。（その?以降のものをパラメーターと呼びます。複数ある場合は?◯◯=□□&△△=××のように&繋ぎになります。◯◯や△△の部分はinputタグやselectタグのname属性が入ります。）
+               この課題では、実際にユーザーが入力した値を送れる状態まで作っていただきます。answerの方で確認していただきたいのですが、全ての入力フォームを適当に記述してsubmitボタンを
+               押してみてください。URL欄の最後に「?name=...」という感じの文字列が追加されているのがわかると思います。
+               （その?以降のものをパラメーターと呼びます。複数ある場合は?◯◯=□□&△△=××のように&繋ぎになります。◯◯や△△の部分はinputタグやselectタグのname属性が入ります。）
                これが、入力した値を送信できている状態です。本来ではこの値をサーバーサイドで受け取ってフォームの処理をするのですが、今回はHTMLを使って送信するまでをやってもらいます。
                answerで入力した値を自分で作ったフォームに全く同じように入力した場合、URLが全く同じように変わる状態にしてください。（formのaction属性やmethod属性が関係してきます）
                また赤の*(アスタリスク)の部分は必須項目です。必須項目を空にしたまま送信しようとするとアラートが表示される処理も再現しましょう。
@@ -99,7 +102,73 @@
           <!-- 回答はここに書いてね -->
           <!-- すでについてるクラスにはstyleを指定しない。styleを付ける場合は自分で新たにクラスをつけること -->
           <div class="q8">
-            
+            <form class="form">
+              <div class="form_title">
+                <p class="form_title_p">Form Exercise</p>
+              </div>
+              <div class="form_contents clearfix">
+                <div class="form_main">
+                  <ul class="form_list">
+                    <li class="name_title clearfix">
+                      <p class="name_p_title">名前<span class="caution_span">*</span></p>
+                      <div class="name_form">
+                        <input type="text" class="name_form_input" name="name" required />
+                      </div>
+                    </li>
+                    <li class="gender_title clearfix">
+                      <p class="gender_p_title">性別</p>
+                      <div class="gender_form">
+                        <label class="gender_label">
+                          <input type="radio" name="gender" value="male" class="gender_label_input" >
+                          <span class="gender_label_span">男性</span>
+                        </label>
+                        <label class="gender_label">
+                          <input type="radio" name="gender" value="famale" class="gender_label_input" >
+                          <span class="gender_label_span">女性</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="hometown_title clearfix">
+                      <p class="hometown_p_title">出身</p>
+                      <div class="hometown_select">
+                        <select name="hometown" class="select_list">
+                          <option value="tokyo">東京</option>
+                          <option value="tokyo">埼玉</option>
+                          <option value="tokyo">千葉</option>
+                          <option value="tokyo">神奈川</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="E-mail_title clearfix">
+                      <p class="E-mail_p_title">Eメール<span class="caution_span">*</span></p>
+                      <div class="E-mail_form">
+                        <input class="E-mail_form_input" placeholder="ex) hoge@gmail.com" type="email" name="email" required>
+                      </div>
+                    </li>
+                    <li class="tell_title clearfix">
+                      <p class="tell_p_title">電話番号</p>
+                      <div class="tell_form">
+                        <input class="tell_form_input" placeholder="ex) 08012345678" type="tel" name="tel">
+                      </div>
+                    </li>
+                    <li class="agree_title clearfix">
+                      <div class="agree_form">
+                        <div class="agree_checkbox">
+                          <input name="twenty" id="agree_form" value="true" type="checkbox" class="agree_checkbox_btn">
+                          <label for="agree_form" class="agree_checkbox_label">20歳以上です</label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="button_submit">
+                    <button class="button_main_submit" type="submit">送信</button>
+                  </div>
+                </div>
+                <div class="form_textarea">
+                  <textarea class="textarea_contents" id="msg" placeholder="何かあれば入力してください。"></textarea>
+                </div>
+              </div>
+            </form>
           </div>
           <!-- 回答はここに書いてね -->
         </div>

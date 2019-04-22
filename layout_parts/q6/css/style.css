@@ -67,4 +67,17 @@
   margin: auto;
 }
 
+/* q6-2 position-flexible*/
+.q6_flexible {
+  position: relative;
+}
+
+.q6_p_flexible {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+
 /* 回答はここに書いてね */

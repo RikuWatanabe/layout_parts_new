@@ -2,4 +2,411 @@
 
 /* 回答はここに書いてね */
 
+/*ボタンフォーム*/
+.small_btn {
+  padding: 0 15px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.middle_btn {
+  padding: 0 20px;
+  margin-right: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.large_btn {
+  padding: 0 25px;
+  margin-right: 10px;
+  font-size: 24px;
+  border-radius: 7px;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.q8_btn :last-child {
+  margin-right: 0;
+}
+
+.small_common, .middle_common, .large_common {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #ffffff;
+}
+
+.small_error, .middle_error, .large_error {
+  display: inline-block;
+  background-color: #ff4081;
+  color: #ffffff;
+}
+
+.small_disabled, .middle_disabled, .large_disabled {
+  display: inline-block;
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
+.small_shadow, .middle_shadow, .large_shadow {
+  display: inline-block;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .12);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .12);
+  color: #222;
+}
+
+/*問い合わせフォーム*/
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form {
+  margin: 0 auto;
+  width: 700px;
+  padding: 20px;
+  background-color: #ECF1F2;
+}
+
+/*フォームタイトル*/
+.form_title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form_title::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  content: "";
+}
+
+.form_title_p {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  background-color: #ECF1F2;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*フォームmain(名前欄)*/
+
+.form_main {
+  width: 300px;
+  float: left;
+}
+
+.name_p_title {
+  float: left;
+  width: 100px;
+  line-height: 25px;
+  text-align: right;
+}
+
+.caution_span {
+  color: #F00;
+}
+
+.name_form {
+  float: right;
+  width: 180px;
+}
+
+.name_form_input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  border: none;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px 0 #00BCD4;
+  outline: 0;
+}
+
+/*フォームgender(性別欄)*/
+.gender_title {
+  margin-top: 20px;
+}
+
+.gender_p_title {
+  float: left;
+  width: 100px;
+  line-height: 25px;
+  text-align: right;
+}
+
+.gender_form {
+  width: 180px;
+  float: right;
+}
+
+.gender_label {
+  cursor: pointer;
+}
+
+.gender_label_input {
+  display: none;
+}
+
+.gender_label_span {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+
+.gender_label_span::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  content: '';
+}
+
+.gender_label_input:checked +
+.gender_label_span::after {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background-color: #00BCD4;
+  border-radius: 50%;
+  content: '';
+}
+
+/*フォーム(出身欄)*/
+.hometown_title {
+  margin-top: 20px; 
+}
+
+.hometown_p_title {
+  float: left;
+  width: 100px;
+  line-height: 25px;
+  text-align: right;
+}
+
+.hometown_select {
+  float: right;
+  width: 180px;
+}
+
+.select_list {
+  height: 22px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+}
+
+.hometown_select {
+  position: relative;
+}
+
+.hometown_select::after {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #E5E5E5;
+  border-bottom: 2px solid #E5E5E5;
+  transform: rotate(45deg);
+  content: "";
+  pointer-events: none;
+}
+
+/*---セレクトボックスの矢印削除---*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+  
+select::-ms-expand {
+  display: none;
+}
+
+/*フォームmail*/
+input[type="email"]:focus {
+  box-shadow: 0 0 10px 0 #00BCD4;
+  outline: 0;
+}
+
+.E-mail_title {
+  margin-top: 20px; 
+}
+
+.E-mail_p_title {
+  float: left;
+  width: 100px;
+  line-height: 25px;
+  text-align: right;
+}
+
+.E-mail_form {
+  float: right;
+  width: 180px;
+}
+
+.E-mail_form_input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  border: none;
+}
+
+/*フォームtell*/
+input[type="tel"]:focus {
+  box-shadow: 0 0 10px 0 #00BCD4;
+  outline: 0;
+}
+
+.tell_title {
+  margin-top: 20px;
+}
+
+.tell_p_title {
+  float: left;
+  width: 100px;
+  line-height: 25px;
+  text-align: right;
+}
+
+.tell_form {
+  float: right;
+  width: 180px;
+}
+
+.tell_form_input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  border: none;
+}
+
+/*フォームagree*/
+.agree_title {
+  margin-top: 20px;
+}
+
+.agree_form {
+  float: right;
+  width: 180px;
+}
+
+.agree_checkbox {
+  text-align: right;
+}
+
+.agree_checkbox_btn {
+  display: none;
+}
+
+.agree_checkbox_label {
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+}
+
+.agree_checkbox_label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: -9px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  content: '';
+}
+
+.agree_checkbox_btn:checked +
+.agree_checkbox_label::after {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin-top: -14px;
+  width: 8px;
+  height: 16px;
+  border-right: 3px solid #00BCD4;
+  border-bottom: 3px solid #00BCD4;
+  transform: rotate(45deg);
+  content: '';
+}
+
+.button_submit {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.button_main_submit {
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: #00BCD4;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+}
+
+
+/*フォームtextbox*/
+.textarea_contents:focus {
+  box-shadow: 0 0 10px 0 #00BCD4;
+  outline: 0;
+}
+
+.form_textarea {
+  float: right;
+  width: 380px;
+}
+
+.textarea_contents {
+  width: 100%;
+  height: 203px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  box-sizing: border-box;
+  resize: none;
+  border: 0;
+}
+
 /* 回答はここに書いてね */

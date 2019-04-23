@@ -8,7 +8,7 @@
   table-layout: fixed;
 }
 
-.menu_data {
+.menu td {
   font-size: 16px;
   line-height: 22px;
   border: 1px solid #dedede;
@@ -16,7 +16,7 @@
   vertical-align: middle;
 }
 
-.menu_title {
+.menu th {
   padding: 10px;
   border: 1px solid #dedede;
   color: #ffffff;
@@ -25,11 +25,11 @@
   line-height: 26px;
 }
 
-.menu_list:last-child {
+.menu tr:last-child {
   border-top: dashed #000 2px;
 }
 
-.menu_list:nth-child(2n-1) {
+.menu tr:nth-child(2n-1) {
   background-color: #ecf1f2;
 }
 

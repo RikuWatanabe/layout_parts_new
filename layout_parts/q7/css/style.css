@@ -24,19 +24,23 @@
   display: table;
 }
 
-.q7_p_table {
-  vertical-align: middle;
-  display: table-cell;
-}
-
 .q7_table_text {
   box-sizing: border-box;
-  width: 225px;
   float: left;
 }
 
-.q7_table_text_last {
-  margin-left: 50px;
+.q7_p_table {
+  vertical-align: middle;
+  display: table-cell;
+  width: 225px;
+}
+
+.q7_p_table:first-child {
+  padding-left: 0;
+}
+
+.q7_p_table:last-child {
+  padding-left: 50px;
 }
 
 /*-----q7 inline-block-----*/

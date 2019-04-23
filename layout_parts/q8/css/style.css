@@ -369,6 +369,13 @@ input[type="tel"]:focus {
   content: '';
 }
 
+.button_main_submit:focus {
+  outline: 0;
+  border: 0px;
+  background-color: #FFF;
+  color: #00BCD4;
+}
+
 .button_submit {
   margin-top: 20px;
   text-align: right;
